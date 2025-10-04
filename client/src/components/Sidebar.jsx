@@ -79,7 +79,7 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen }) => {
 
   return (
     <div
-      className={`flex flex-col h-screen min-w-72 p-5 dark:bg-gradient-to-b from-[#242124]/30 to-[#000000]/30 border-r border-[#80609F]/30 backdrop-blur-3xl transition-all duration-500 max-md:absolute left-0 z-1 ${
+      className={`flex flex-col h-screen min-w-72 p-5 dark:bg-gradient-to-b from-[#242124]/30 to-[#000000]/30 border-r border-[#80609F]/30 backdrop-blur-3xl transition-all duration-500 max-md:fixed max-md:left-0 max-md:top-0 max-md:z-40 ${
         !isMenuOpen && "max-md:-translate-x-full"
       }`}>
       {/* Logo */}
@@ -112,7 +112,7 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen }) => {
           value={search}
           type="text"
           placeholder="Search conversations"
-          className="text-xs placeholder:text-gray-400 outline-none"
+          className="text-xs placeholder:text-gray-400 outline-none bg-transparent"
         />
       </div>
 
@@ -227,8 +227,8 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen }) => {
       <img
         onClick={() => setIsMenuOpen(false)}
         src={assets.close_icon}
-        className="absolute top-3 right-3 w-5 h-5 cursor-pointer md:hidden not-dark:invert"
-        alt=""
+        className="absolute top-3 right-3 w-5 h-5 cursor-pointer md:hidden not-dark:invert z-50"
+        alt="Close menu"
       />
     </div>
   );
