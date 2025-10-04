@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useAppContext } from "../context/AppContext.jsx";
-import { assets } from "../assets/assets.js";
-import Message from "./Message.jsx";
+import { useAppContext } from "../context/AppContext";
+import { assets } from "../assets/assets";
+import Message from "./Message";
 import toast from "react-hot-toast";
 
 const ChatBox = () => {
@@ -75,7 +75,7 @@ const ChatBox = () => {
   }, [messages]);
 
   return (
-    <div className="flex-1 flex flex-col justify-between m-5 md:m-10 xl:mx-30 max-md:mt-14 2xl:pr-40">
+    <div className="flex-1 flex flex-col justify-between h-screen p-5 md:p-10 max-md:pt-20 max-md:pb-5">
       {/* Chat Messages */}
       <div ref={containerRef} className="flex-1 mb-5 overflow-y-scroll">
         {messages.length === 0 && (
@@ -88,9 +88,9 @@ const ChatBox = () => {
               />
               <div>
                 <h1 className="text-4xl sm:text-6xl font-bold dark:text-white text-gray-800">
-                  MaxAI
+                  QuickGPT
                 </h1>
-                <p className="text-sm text-[rgb(131,107,246)]">
+                <p className="text-sm text-gray-500 dark:text-gray-400">
                   Intelligent AI Assistant
                 </p>
               </div>
