@@ -88,7 +88,7 @@ const ChatBox = () => {
               />
               <div>
                 <h1 className="text-4xl sm:text-6xl font-bold dark:text-white text-gray-800">
-                  QuickGPT
+                  MaxAI
                 </h1>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   Intelligent AI Assistant
